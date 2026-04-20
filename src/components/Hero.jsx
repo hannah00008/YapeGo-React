@@ -11,7 +11,7 @@ export default function Hero() {
         style={{ clipPath: "ellipse(80% 90% at 50% -5%)" }}
       >
         <img
-          src="/fondo-hero.png" 
+          src="fondo-hero.png" 
           alt="Hero Background"
           className="w-full h-full object-cover"
         />

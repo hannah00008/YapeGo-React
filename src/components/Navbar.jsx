@@ -38,7 +38,7 @@ function Navbar() {
         <div className="flex items-center relative">
           <Link to="/" className="flex items-center">
                <img 
-                 src="/logo.png" 
+                 src="logo.png" 
                  alt="Yape Go Logo" 
                  // h-20 hace el logo grande, absolute y -top hace que flote sin ensanchar la barra
                  className="h-16 md:h-20 w-auto object-contain drop-shadow-lg absolute -top-8 md:-top-10 left-0 transition-transform hover:scale-105" 

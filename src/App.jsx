@@ -14,6 +14,8 @@ import Postula from "./components/Postula";
 import Estadisticas from "./components/Estadisticas";
 import ChatBotYape from "./components/ChatBotYape";
 import ConfianzaLaboral from "./components/ConfianzaLaboral";
+import TransitionEffect from './components/TransitionEffect';
+import SplashCursor from './components/SplashCursor';
 
 import ExploraYape from "./pages/ExploraYape";
 import DetalleArea from "./pages/DetalleArea";
@@ -45,24 +47,29 @@ function ScrollToHash() {
 function App() {
   return (
     <>
-      {/* ✅ COMBINACIÓN DE UTILIDADES: Scroll arriba y soporte para anclas # */}
+      {/* 1. EL EFECTO SIEMPRE AL PRINCIPIO PARA QUE ESTÉ POR ENCIMA DE TODO */}
+      <SplashCursor 
+        COLOR="#7422ed" 
+        DENSITY_DISSIPATION={3.0} 
+        CURL={5} 
+      />
+
       <ScrollToTop />
       <ScrollToHash />
 
-      {/* ✅ NAVBAR SIEMPRE VISIBLE */}
       <Navbar />
 
       <Routes>
-        {/* ✅ RUTAS DE CURSO Y POSTULACIÓN */}
         <Route path="/curso" element={<Curso />} />
         <Route path="/postulacion" element={<Postulacion />} />
 
-        {/* 🏠 HOME */}
+        {/* 🏠 HOME (Ahora limpio del SplashCursor) */}
         <Route
           path="/"
           element={
             <>
               <Hero />
+              <TransitionEffect />
               <Areas />
               <Testimonios />
               <Estadisticas />
@@ -71,30 +78,22 @@ function App() {
           }
         />
 
-        {/* 🚀 PÁGINAS */}
+        {/* ... Resto de tus rutas se mantienen igual */}
         <Route path="/explora" element={<ExploraYape />} />
         <Route path="/inspiracion" element={<Inspiracion />} />
         <Route path="/aprendizaje" element={<Aprendizaje />} />
         <Route path="/orientacion" element={<Orientacion />} />
         <Route path="/confianzalaboral" element={<ConfianzaLaboral />} />
-
-        {/* 📄 FUNCIONALIDADES */}
         <Route path="/postular/:area" element={<FormularioPostulacion />} />
         <Route path="/area/:id" element={<DetalleArea />} />
-
-        {/* 🔐 AUTH */}
         <Route path="/login" element={<Login />} />
         <Route path="/registro" element={<Registro />} />
-
-        {/* 👤 PERFIL */}
         <Route path="/perfil" element={<Perfil />} />
       </Routes>
 
-      {/* ✅ SIEMPRE VISIBLES */}
       <Footer />
       <ChatBotYape />
     </>
   );
 }
-
 export default App;

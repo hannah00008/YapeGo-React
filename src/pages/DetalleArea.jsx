@@ -7,56 +7,56 @@ const contenidoAreas = {
     emoji: "💻",
     frase: "Aquí se construye y mantiene la aplicación.",
     puntos: ["Desarrollo de la app (frontend/backend)", "Programación (React, APIs, etc.)", "Seguridad del sistema", "Infraestructura"],
-    imagenCabecera: "/imagen-tech.png" 
+    imagenCabecera: "imagen-tech.png" 
   },
   "data-and-analytics": {
     titulo: "Data & Analytics",
     emoji: "📊",
     frase: "Aquí analizamos datos para tomar mejores decisiones.",
     puntos: ["Análisis de usuarios", "Métricas (uso de la app, búsquedas)", "Reportes estrategicos", "Inteligencia de negocio"],
-    imagenCabecera: "/imagen-data.png"
+    imagenCabecera: "imagen-data.png"
   },
   "people": {
     titulo: "People (RRHH)",
     emoji: "👥",
     frase: "Encuentra y gestiona al mejor talento del equipo.",
     puntos: ["Reclutamiento", "Selección de talento", "Cultura", "Capacitación"],
-     imagenCabecera: "/imagen-people.png"
+     imagenCabecera: "imagen-people.png"
   },
    "planeamiento": {
     titulo: "Planeamiento",
     emoji: "📈",
     frase: "Aquí se decide hacia dónde va la empresa.",
     puntos: ["Objetivos del negocio", "Planes a futuro", "Organización de proyectos", "Crecimiento"],
-     imagenCabecera: "/imagen-planeamiento.png" 
+     imagenCabecera: "imagen-planeamiento.png" 
   },
   "experiencia": {
     titulo: "Experiencia (UX/UI)",
     emoji: "⭐",
     frase: "Aquí se asegura que la app sea fácil y agradable de usar.",
     puntos: ["Diseño de la app", "Facilidad de uso", "Interfaz atractiva", "Experiencia del cliente"],
-     imagenCabecera: "/imagen-experiencia.png" 
+     imagenCabecera: "imagen-experiencia.png" 
   },
   "pagos": {
     titulo: "Pagos",
     emoji: "💳",
     frase: "Aquí se gestionan los pagos de forma rápida y segura.",
     puntos: ["Transferencias", "Pagos digitales", "Seguridad en transacciones", "Integración con bancos"],
-     imagenCabecera: "/imagen-pagos.png" 
+     imagenCabecera: "imagen-pagos.png" 
   },
   "commerce": {
     titulo: "Commerce",
     emoji: "🛒",
     frase: "Aquí se conecta a usuarios con oportunidades o servicios.",
     puntos: ["Ofertas de empleo", "Servicios dentro de la app", "Relación con empresas", "Publicaciones"],
-     imagenCabecera: "/imagen-commerce.png" 
+     imagenCabecera: "imagen-commerce.png" 
   },
   "marketing": {
     titulo: "Marketing",
     emoji: "📣",
     frase: "Aquí se da a conocer la app y se atraen usuarios.",
     puntos: ["Publicidad", "Redes sociales", "Campañas", "Atracción de usuarios"],
-     imagenCabecera: "/imagen-marketing.png" 
+     imagenCabecera: "imagen-marketing.png" 
   }
 };
 

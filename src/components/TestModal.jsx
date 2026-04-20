@@ -95,22 +95,38 @@ export default function TestModal({ isOpen, onClose }) {
             ))}
           </div>
 
-          {/* Escala Numérica Interactiva */}
+          {/* Escala Numérica Interactiva con Etiquetas Añadidas */}
           <p className="text-gray-400 text-sm mb-4">Selecciona cuánto te representa</p>
           <div className="flex justify-center gap-3 mb-10">
-            {[1, 2, 3, 4, 5].map((num) => (
-              <button 
-                key={num}
-                onClick={() => setNumeroSeleccionado(num)}
-                className={`w-12 h-12 rounded-full border-2 font-bold transition-all ${
-                  numeroSeleccionado === num 
-                    ? "bg-purple-600 border-purple-600 text-white shadow-lg scale-110" 
-                    : "border-gray-100 text-gray-600 hover:bg-purple-50 hover:border-purple-300"
-                }`}
-              >
-                {num}
-              </button>
-            ))}
+            {[1, 2, 3, 4, 5].map((num) => {
+              const etiquetas = {
+                1: "Nada",
+                2: "Poco",
+                3: "Medio",
+                4: "Mucho",
+                5: "Total"
+              };
+
+              return (
+                <div key={num} className="flex flex-col items-center gap-2">
+                  <button 
+                    onClick={() => setNumeroSeleccionado(num)}
+                    className={`w-12 h-12 rounded-full border-2 font-bold transition-all ${
+                      numeroSeleccionado === num 
+                        ? "bg-purple-600 border-purple-600 text-white shadow-lg scale-110" 
+                        : "border-gray-100 text-gray-600 hover:bg-purple-50 hover:border-purple-300"
+                    }`}
+                  >
+                    {num}
+                  </button>
+                  <span className={`text-[10px] font-bold uppercase tracking-wider transition-colors ${
+                    numeroSeleccionado === num ? "text-purple-600" : "text-gray-400"
+                  }`}>
+                    {etiquetas[num]}
+                  </span>
+                </div>
+              );
+            })}
           </div>
 
           <button 

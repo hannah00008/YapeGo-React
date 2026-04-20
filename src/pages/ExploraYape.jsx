@@ -52,7 +52,7 @@ const ExploraYape = () => {
               Sustituye 'placeholder-imagen.png' por una imagen real con fondo transparente.
             */}
             <img 
-              src="/conoceyape.png" 
+              src="conoceyape.png" 
               alt="Ilustración Impacto Yape"
               className="w-full max-w-xl object-contain rounded-2xl shadow-xl border-4 border-white/20"
             />
@@ -120,12 +120,12 @@ const ExploraYape = () => {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       
       {[
-        { id: 1, nombre: "Shen Tay Wo Chong", area: "Tecnología", img: "/1.jpg", color: "#6A1B9A" },
-        { id: 2, nombre: "Mauricio Villena", area: "Marketing & Growth", img: "/2.jpg", color: "#FF9800" },
-        { id: 3, nombre: "Nicolas del Águila", area: "Pagos", img: "/3.jpg", color: "#1976D2" },
-        { id: 4, nombre: "Karla Monier", area: "Retail", img: "/8.jpg", color: "#6A1B9A" },
-        { id: 5, nombre: "Natalia Prieto", area: "Estrategia de personas", img: "/6.jpg", color: "#FF9800" },
-        { id: 6, nombre: "Jorge Escobedo", area: "Data & Analytics", img: "/7.jpg", color: "#1976D2" },
+        { id: 1, nombre: "Shen Tay Wo Chong", area: "Tecnología", img: "1.jpg", color: "#6A1B9A" },
+        { id: 2, nombre: "Mauricio Villena", area: "Marketing & Growth", img: "2.jpg", color: "#FF9800" },
+        { id: 3, nombre: "Nicolas del Águila", area: "Pagos", img: "3.jpg", color: "#1976D2" },
+        { id: 4, nombre: "Karla Monier", area: "Retail", img: "8.jpg", color: "#6A1B9A" },
+        { id: 5, nombre: "Natalia Prieto", area: "Estrategia de personas", img: "6.jpg", color: "#FF9800" },
+        { id: 6, nombre: "Jorge Escobedo", area: "Data & Analytics", img: "7.jpg", color: "#1976D2" },
       ].map((yaper) => (
         <div 
           key={yaper.id} 
@@ -154,9 +154,6 @@ const ExploraYape = () => {
               {yaper.area}
             </p>
             
-            <button className="text-[#00D1FF] text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all">
-              Ver más <span>→</span>
-            </button>
           </div>
           
 

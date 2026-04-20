@@ -114,7 +114,7 @@ const ConfianzaLaboral = () => {
         {/* --- FOOTER DE CONFIANZA --- */}
         <div className="grid md:grid-cols-2 gap-8">
           
-          {/* ✅ SECCIÓN EMPRESAS TOP (CORREGIDA SIN DUPLICADOS) */}
+          {/* ✅ SECCIÓN EMPRESAS TOP ACTUALIZADA (10 IMÁGENES LOCALES + EFECTOS) */}
           <div className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col gap-8 group overflow-hidden">
             <div className="flex items-center gap-8">
               <div className="w-20 h-20 bg-purple-50 text-[#7422ed] rounded-3xl flex items-center justify-center group-hover:bg-[#7422ed] group-hover:text-white transition-all shadow-inner">
@@ -131,23 +131,34 @@ const ConfianzaLaboral = () => {
               </div>
             </div>
             
-            {/* Carrusel Corregido */}
+            {/* Carrusel con efectos de escala/color preparado para tus 10 imágenes */}
             <div className="mt-2 -mx-10"> 
-              <Marquee gradient={false} speed={45} pauseOnHover={true} className="flex items-center">
+              <Marquee gradient={false} speed={50} pauseOnHover={true} className="flex items-center">
                 {[
-                  { name: "Interbank", url: "https://upload.wikimedia.org/wikipedia/commons/e/ed/Logo_Interbank.svg" },
-                  { name: "BCP", url: "https://upload.wikimedia.org/wikipedia/commons/c/c5/Banco_de_Cr%C3%A9dito_del_Per%C3%BA_logo.svg" },
-                  { name: "Alicorp", url: "https://upload.wikimedia.org/wikipedia/commons/0/07/Logo_alicorp.svg" },
-                  { name: "Gloria", url: "https://upload.wikimedia.org/wikipedia/commons/c/cb/Logo_Grupo_Gloria.svg" },
-                  { name: "Saga Falabella", url: "https://upload.wikimedia.org/wikipedia/commons/8/87/Falabella.svg" },
-                  { name: "Rappi", url: "https://upload.wikimedia.org/wikipedia/commons/0/06/Rappi_logo.svg" },
+                  // REEMPLAZA ESTOS NOMBRES POR LOS DE TUS ARCHIVOS REALES (ej: "/logo-interbank.png")
+                  { name: "China Wok", url: "schinawonk.png" },
+                  { name: "BCP", url: "bcp.png" },
+                  { name: "Burger King", url: "burgerking.png" },
+                  { name: "CineMark", url: "cinemark.png" },
+                  { name: "KFC", url: "kfc.png" },
+                  { name: "Oxxo", url: "oxxo.png" },
+                  { name: "Rappi", url: "rappi.png" },
+                  { name: "Smart Fit", url: "smartfit.png" },
+                  { name: "Tambo", url: "tambo.png" },
+                   { name: "McDonald's", url: "mac.png" },
+                    { name: "CinePlanet", url: "cineplanet.png" },
+                    { name: "Primax", url: "primax.png" },
+                    { name: "Pilsen", url: "pilsen.png" },
+                    { name: "Beso Frances", url: "beso.png" },
                 ].map((logo, index) => (
-                  <div key={index} className="mx-10 flex items-center justify-center h-10 w-32 group/logo">
+                  <div key={index} className="mx-12 flex items-center justify-center h-12 w-36 group/logo">
                     <img 
                       src={logo.url} 
                       alt={logo.name} 
-                      className="max-h-full max-w-full object-contain filter grayscale opacity-60 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 transition-all duration-300"
-                      onError={(e) => { e.target.style.display = 'none'; }}
+                      // Mismos efectos visuales y de animación
+                      className="max-h-full max-w-full object-contain filter grayscale opacity-50 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 group-hover/logo:scale-110 transition-all duration-300 cursor-pointer"
+                      // Si la imagen local no carga, se oculta el contenedor
+                      onError={(e) => { e.target.parentElement.style.display = 'none'; }}
                     />
                   </div>
                 ))}
